@@ -25,3 +25,8 @@ class SubscriptionList(generics.ListCreateAPIView):
     serializer_class = SubscriptionSerializer
     name = "subscription-list"
     queryset = Subscription.objects.all()
+
+
+class ApplianceDetails(generics.RetrieveUpdateDestroyAPIView):
+    queryset = Appliances.objects.all()
+    serializer_class = AppliancesSerializer
